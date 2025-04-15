@@ -1,0 +1,63 @@
+body {
+    background: rgb(110, 110, 129);
+    font: normal 16px Arial, sans-serif;
+}
+
+header {
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    font-size: 2em;
+    font-weight: bold;
+}
+
+section {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 15px;
+    width: 90%;
+    max-width: 600px;
+    margin: 30px auto;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+
+div#msg {
+    margin-bottom: 20px;
+}
+
+div#img img {
+    width: 50%;
+    height: 50%;
+}
+
+input#btn {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+input#btn:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+input#btn:active {
+    transform: scale(0.98);
+}
+
+
+
+footer {
+    color: white;
+    text-align: center;
+    font-style: italic;
+    padding: 20px 0;
+    margin-top: 40px;
+}

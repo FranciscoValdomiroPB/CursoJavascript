@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var nome = window.prompt('qual é seu nome?')
+        document.write(`seu nome tem ${nome.length} letras. <br/>`)
+        var salario = window.prompt('qual é o seu salário?')
+
+        //faz 3 coisas nessa parte primerio passa para Float depois traz para pt-br e depois coloca em REAL.
+        var f = Number.parseFloat(salario).toLocaleString('pt-br', { style: 'currency', currency: 'BRL' });
+        //faz 3 coisas nessa parte primerio passa para Float depois traz para pt-br e depois coloca em REAL sem R$.
+        var f2 = Number.parseFloat(salario).toLocaleString('pt-br', { minimumFractionDigits: 2 });
+        document.write(`Seu salário é de ${f}!<br/>`)
+        document.write(`Seu salário é de R$${f2}!<br/>`)
+
+        //faz 3 coisas nessa parte primerio passa para Float depois traz para pt-br e depois coloca em USD.
+        var f = Number.parseFloat(salario).toLocaleString('pt-br', { style: 'currency', currency: 'USD' });
+        //faz 3 coisas nessa parte primerio passa para Float depois traz para pt-br e depois coloca em USA sem $.
+        var f2 = Number.parseFloat(salario).toLocaleString('pt-br', { minimumFractionDigits: 2 });
+        document.write(`Seu salário é de ${f}!<br/>`)
+        document.write(`Seu salário é de $${f2}!<br/>`)
+
+        //faz 3 coisas nessa parte primerio passa para Float depois traz para pt-br e depois coloca em EUR.
+        var f = Number.parseFloat(salario).toLocaleString('pt-br', { style: 'currency', currency: 'EUR' });
+        //faz 3 coisas nessa parte primerio passa para Float depois traz para pt-br e depois coloca em EUR sem € .
+        var f2 = Number.parseFloat(salario).toLocaleString('pt-br', { minimumFractionDigits: 2 });
+        document.write(`Seu salário é de ${f}!<br/>`)
+        document.write(`Seu salário é de €${f2}!`)
+    </script>
+</body>
+
+</html>

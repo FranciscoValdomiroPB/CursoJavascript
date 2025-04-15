@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Immigration</title>
+    <style>
+        body {
+            background-color: green;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+
+        h1 {
+            text-align: center;
+            color: yellow;
+        }
+
+        div#bloco {
+            background-color: blue;
+            color: white;
+            padding: 20px;
+            width: 300px;
+            margin: auto;
+            text-align: center;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        input {
+            margin: 5px;
+            padding: 5px;
+        }
+
+        #res {
+            margin-top: 10px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Guarulhos Airport</h1>
+    <div id="bloco">
+        <p>Which country do you live in?</p>
+        <input type="text" name="textcountry" id="textcountry">
+        <input type="button" value="Check" onclick="check()">
+        <div id="res"></div>
+    </div>
+    <script>
+        function check() {
+            var country = document.querySelector('#textcountry').value.trim().toLowerCase();
+            var res = document.querySelector('#res');
+
+            if (country === 'brazil') {
+                res.innerHTML = `Welcome to Guarulhos Airport!`;
+            } else {
+                res.innerHTML = `Welcome to Guarulhos Airport! Please proceed to immigration.`;
+            }
+        }
+    </script>
+</body>
+
+</html>

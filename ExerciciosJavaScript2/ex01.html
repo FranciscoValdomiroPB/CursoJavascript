@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Age Checker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>Age Checker</header>
+    <section>
+        <div id="Ano">Year of Birth:
+            <p>
+                <input type="number" name="txtano" id="txtano" max="2023" min="1900">
+            </p>
+
+            <p>Sex:
+                <input type="radio" name="radsex" id="masc" checked>
+                <label for="masc">Masculine</label>
+                <input type="radio" name="radsex" id="fem">
+                <label for="fem">Feminine</label>
+            </p>
+
+            <p><input type="button" value="Age checked" id="btn" onclick="ageChecked()">
+            </p>
+
+        </div>
+        <div id="res">You have....</div>
+        <div id="img">
+            <img id="file" alt="" src="img/question.png">
+        </div>
+    </section>
+    <footer>
+        <p>&copy;valdomiro</p>
+    </footer>
+    <script src="script.js"></script>
+
+</body>
+
+</html>

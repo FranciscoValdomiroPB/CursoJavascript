@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detran</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f4f4f4;
+            margin-top: 50px;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        input {
+            margin: 5px;
+            padding: 5px;
+        }
+
+        #res {
+            margin-top: 20px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .fine {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 id="h1title">Traffic Fine System</h1>
+    <label for="txtspeed">Car speed:</label>
+    <input type="number" name="txtspeed" id="txtspeed"> Km/h
+    <input type="button" value="Check" onclick="calcular()">
+    
+    <div id="res"></div>
+
+    <script>
+        function calcular() {
+            var txtv = document.querySelector('#txtspeed');
+            var res = document.querySelector('#res');
+            var speed = Number(txtv.value);
+            
+            res.innerHTML = `<p>Your current speed is <strong>${speed} Km/h</strong>.</p>`;
+
+            if (speed > 60) {
+                res.innerHTML += `<p class="fine">You have been fined!</p>`;
+            }
+            
+            res.innerHTML += `<p>Always drive with your seat belt on.</p>`;
+        }
+    </script>
+</body>
+
+</html>
